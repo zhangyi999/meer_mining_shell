@@ -1,4 +1,4 @@
-# meer_mining_shh
+# meer 内测网挖矿说明
 meer mining shh
 
 ## 云节点挖矿要做什么？
