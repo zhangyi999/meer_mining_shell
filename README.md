@@ -1,7 +1,7 @@
 <!--
  * @Author: zhangyi999
  * @Date: 2021-07-06 15:08:36
- * @LastEditTime: 2021-07-08 12:22:32
+ * @LastEditTime: 2021-07-09 14:31:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /meer_mining_shell/README.md
@@ -17,7 +17,7 @@ meer mining shh
 4. 创建 mixnet 地址
     * 用 qx 工具创建，进入 `qitmeer/cmd/qx` 目录，`go build` 生成 qx 文件
     * 创建助记词 `qx entropy | qx mnemonic-new`
-    * 创建 mixnet 地址 `qx  mnemonic-to-entropy'...mnemonic word...' | qx ec-new | qx ec-to-public | qx ec-to-addr -v mixnet`
+    * 创建 mixnet 地址 `qx mnemonic-to-seed '...mnemonic word...' | qx ec-new | qx ec-to-public | qx ec-to-addr -v mixnet`
     * 获得 X 开头的地址
     * 也可直接 下载 `kahf` 钱包内测版，生成地址
 
