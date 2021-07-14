@@ -1,7 +1,7 @@
 <!--
  * @Author: zhangyi999
  * @Date: 2021-07-06 15:08:36
- * @LastEditTime: 2021-07-12 11:26:55
+ * @LastEditTime: 2021-07-14 10:19:33
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /meer_mining_shell/README.md
@@ -15,7 +15,7 @@ meer 采用 pow 共识，主要挖矿依赖为`cpu`算力，最低配置要求�
 ## 挖矿教程
 
 1. 安装： golang 【推荐版本 go1.16】[安装链接](https://golang.google.cn/dl/)
-2. 获取 git 上的代码库 [https://github.com/Qitmeer/qitmeer/tree/0.10-dev](https://github.com/Qitmeer/qitmeer/tree/0.10-dev)
+2. 获取 git 上的代码库 [https://github.com/Qitmeer/qitmeer/tree/0.10-dev](https://github.com/Qitmeer/qitmeer/tree/0.10-dev) *** 【注意这里要选 0.10 版本】 ***
     ```bash
     ~ go version
     go version go1.16 darwin/amd64
