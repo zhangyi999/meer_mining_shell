@@ -1,7 +1,7 @@
 <!--
  * @Author: zhangyi999
  * @Date: 2021-07-06 15:08:36
- * @LastEditTime: 2021-07-15 00:07:19
+ * @LastEditTime: 2021-07-15 00:08:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /meer_mining_shell/README.md
@@ -95,8 +95,8 @@ meer 采用 pow 共识，主要挖矿依赖为`cpu`算力，最低配置要求�
 
     ~ vi solo.conf
     
-    #miner address
-    mineraddress=TmcpXmwHutepH2wL829PekKodQp7HmzNnKX
+    #miner address【修改挖矿地址】
+    mineraddress=XmnqZubH9ZkBpv2n79DaYYfrZZsmZxWCppx
     # node rpc server
     # 改为节点 ip 【内网可以配置为 内网ip】
     rpcserver=http://xx.xxx.xx.xx:1234
