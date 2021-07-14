@@ -1,7 +1,7 @@
 <!--
  * @Author: zhangyi999
  * @Date: 2021-07-06 15:08:36
- * @LastEditTime: 2021-07-14 10:19:33
+ * @LastEditTime: 2021-07-14 10:59:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /meer_mining_shell/README.md
@@ -10,7 +10,7 @@
 
 ## 硬件最低要求
 
-meer 采用 pow 共识，主要挖矿依赖为`cpu`算力，最低配置要求：2核/4G/40G硬盘/1M带宽
+meer 采用 pow 共识，主要挖矿依赖为`cpu`算力，最低配置要求：2核/4G/40G硬盘/1M带宽【推荐系统 Ubuntu】
 
 ## 挖矿教程
 
