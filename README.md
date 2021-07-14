@@ -1,7 +1,7 @@
 <!--
  * @Author: zhangyi999
  * @Date: 2021-07-06 15:08:36
- * @LastEditTime: 2021-07-14 10:59:57
+ * @LastEditTime: 2021-07-14 23:49:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /meer_mining_shell/README.md
@@ -13,6 +13,10 @@
 meer 采用 pow 共识，主要挖矿依赖为`cpu`算力，最低配置要求：2核/4G/40G硬盘/1M带宽【推荐系统 Ubuntu】
 
 ## 挖矿教程
+
+挖矿需要部署 **【0.10-dev 版本】** 节点，然后开启挖矿程序
+
+### 步骤
 
 1. 安装： golang 【推荐版本 go1.16】[安装链接](https://golang.google.cn/dl/)
 2. 获取 git 上的代码库 [https://github.com/Qitmeer/qitmeer/tree/0.10-dev](https://github.com/Qitmeer/qitmeer/tree/0.10-dev)  **【注意这里要选 0.10-dev 版本】**
@@ -54,23 +58,60 @@ meer 采用 pow 共识，主要挖矿依赖为`cpu`算力，最低配置要求�
         5d44b2f75f3513ab22fab82575b1ce41a86480548c5739be7a625a99bc76ca11
 
         # 创建地址
-        ~ qx ec-to-public 5d44b2f75f3513ab22fab82575b1ce41a86480548c5739be7a625a99bc76ca11 | qx ec-to-addr -v testnet
+        ~ qx ec-to-public 5d44b2f75f3513ab22fab82575b1ce41a86480548c5739be7a625a99bc76ca11 | qx ec-to-addr -v mixnet
 
-        TmcpXmwHutepH2wL829PekKodQp7HmzNnKX
+        XmnqZubH9ZkBpv2n79DaYYfrZZsmZxWCppx
 
         # qx 工具并不储存任何数据，以上生成的助记词需要单独保存
     ```
-    * 也可直接下载`kahf`钱包，创建`testnet`地址
+    > 也可直接下载`kahf`钱包，创建`testnet`地址
 
-5. 将配置文件`miner.sh、start.sh、createCuckoo24.sh、createBlake2bd.sh`拷贝到 `qitmeer` 目录下
-6. 修改 `start.sh` 配置
-   ```bash
-    ~ vim start.sh
-    network="--testnet"
-    mining="--miningaddr TmcpXmwHutepH2wL829PekKodQp7HmzNnKX"
+4. 启动节点
+    ```bash
+    # 将 start.sh 脚本拷贝至 qitmeer 目录下
+    ~ vi start.sh
+
+    mining="--miningaddr XmnqZubH9ZkBpv2n79DaYYfrZZsmZxWCppx"
     ...
-    # 这里可以使用内网ip
-    externalip="--externalip=47.xx.xxx.xx"
-   ```
-7. 运行 `start.sh` 启动节点，新建窗口运行 `miner.sh` 开始挖矿。
+    # 这里需要在云节点安全组里配置相应端口
+    rpc="--rpclisten 0.0.0.0:1234 --rpcuser admin --rpcpass 123"
+    ...
+    # 配置节点 ip 地址
+    externalip="--externalip=xx.xxx.xxx.x"
 
+    :wq
+
+    chmod +x start.sh
+
+    # 启动节点
+    ./start.sh
+    ```
+
+5. 下载【qitmeer-miner Ubuntu 编译】[https://github.com/zhangyi999/meer_mining_shell/releases/download/0.10-dev/qitmeer-miner](https://github.com/zhangyi999/meer_mining_shell/releases/download/0.10-dev/qitmeer-miner)
+    ```bash
+    ~ git clone git@github.com:zhangyi999/meer_mining_shell.git
+    ~ cd meer_mining_shell
+    ~ wget https://github.com/zhangyi999/meer_mining_shell/releases/download/0.10-dev/qitmeer-miner
+
+    ~ vi solo.conf
+    
+    #miner address
+    mineraddress=TmcpXmwHutepH2wL829PekKodQp7HmzNnKX
+    # node rpc server
+    # 改为节点 ip
+    rpcserver=https://xx.xxx.xx.xx:1234
+    # node rpc user【设置节点 rpc 用户名】
+    rpcuser=admin
+    # node rpc password【设置节点 rpc 密码】
+    rpcpass=123
+    ...
+    # network privnet|testnet|mainnet|mixnet
+    network=mixnet
+
+    :wq
+
+    chmod +x qitmeer-miner
+    
+    # 开始挖矿
+    ./qitmeer-miner  -C solo.conf
+    ```
