@@ -1,7 +1,7 @@
 <!--
  * @Author: zhangyi999
  * @Date: 2021-07-06 15:08:36
- * @LastEditTime: 2021-07-14 23:49:43
+ * @LastEditTime: 2021-07-15 00:07:19
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /meer_mining_shell/README.md
@@ -73,7 +73,7 @@ meer 采用 pow 共识，主要挖矿依赖为`cpu`算力，最低配置要求�
 
     mining="--miningaddr XmnqZubH9ZkBpv2n79DaYYfrZZsmZxWCppx"
     ...
-    # 这里需要在云节点安全组里配置相应端口
+    # 如果取消对外方位，记得在云节点安全组里配置相应端口
     rpc="--rpclisten 0.0.0.0:1234 --rpcuser admin --rpcpass 123"
     ...
     # 配置节点 ip 地址
@@ -84,7 +84,7 @@ meer 采用 pow 共识，主要挖矿依赖为`cpu`算力，最低配置要求�
     chmod +x start.sh
 
     # 启动节点
-    ./start.sh
+    sudo ./start.sh
     ```
 
 5. 下载【qitmeer-miner Ubuntu 编译】[https://github.com/zhangyi999/meer_mining_shell/releases/download/0.10-dev/qitmeer-miner](https://github.com/zhangyi999/meer_mining_shell/releases/download/0.10-dev/qitmeer-miner)
@@ -98,8 +98,8 @@ meer 采用 pow 共识，主要挖矿依赖为`cpu`算力，最低配置要求�
     #miner address
     mineraddress=TmcpXmwHutepH2wL829PekKodQp7HmzNnKX
     # node rpc server
-    # 改为节点 ip
-    rpcserver=https://xx.xxx.xx.xx:1234
+    # 改为节点 ip 【内网可以配置为 内网ip】
+    rpcserver=http://xx.xxx.xx.xx:1234
     # node rpc user【设置节点 rpc 用户名】
     rpcuser=admin
     # node rpc password【设置节点 rpc 密码】
@@ -113,5 +113,5 @@ meer 采用 pow 共识，主要挖矿依赖为`cpu`算力，最低配置要求�
     chmod +x qitmeer-miner
     
     # 开始挖矿
-    ./qitmeer-miner  -C solo.conf
+    sudo ./qitmeer-miner  -C solo.conf
     ```
