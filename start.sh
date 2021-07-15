@@ -11,11 +11,11 @@ rpc="--rpclisten 127.0.0.1:1234 --rpcuser test --rpcpass test"
 path="-b "$(pwd)
 #index="--txindex"
 index=""
-notls="--notls"
+# notls="--notls"
 ge="--generate 1"
 modules="--modules=miner"
 modules1="--modules=qitmeer"
-externalip="--externalip=xx.xxx.xxx.x"
+externalip="--externalip=192.0.xx.xx"
 #p2p="--listen 0.0.0.0:28130 --externalip=xx.xxx.xx.xxx:28130"
 #1.) The start script used only for dev test purpose
 #2.) the relative path of qitmeer executable link sould be the same path of the start.sh link
@@ -29,3 +29,4 @@ externalip="--externalip=xx.xxx.xxx.x"
 # $ ln -s /where/is/my/qitmeer/start.sh
 # $ ./start.sh
 ./build/bin/qitmeer $externalip $debug $rpc $path $index $network $mining $notls $modules $modules1 "$@"
+# ./cmd/qitmeerd/qitmeerd

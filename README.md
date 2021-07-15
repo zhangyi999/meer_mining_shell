@@ -1,7 +1,7 @@
 <!--
  * @Author: zhangyi999
  * @Date: 2021-07-06 15:08:36
- * @LastEditTime: 2021-07-15 00:08:57
+ * @LastEditTime: 2021-07-15 18:31:35
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /meer_mining_shell/README.md
@@ -30,8 +30,11 @@ meer 采用 pow 共识，主要挖矿依赖为`cpu`算力，最低配置要求�
 
     ~ make
     Done building.
-    qitmeer version 0.9.2+dev-1f5defd (Go version go1.16))
+    qitmeer version 0.10.0+dev-b07cab5 (Go version go1.16))
     Run "./build/bin/qitmeer" to launch.
+
+    # 如果这里版本显示不是 0.10 版本，则需要切换到 0.10 分支
+    git checkout -b 0.10-dev origin/0.10-dev
 
     # 依赖安装时如果安装超时则需要配置代理
     export GOPROXY=https://goproxy.io
