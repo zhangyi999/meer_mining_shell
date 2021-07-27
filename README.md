@@ -1,7 +1,7 @@
 <!--
  * @Author: zhangyi999
  * @Date: 2021-07-06 15:08:36
- * @LastEditTime: 2021-07-27 15:37:07
+ * @LastEditTime: 2021-07-27 16:18:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /meer_mining_shell/README.md
@@ -77,7 +77,7 @@ meer 采用 pow 共识，主要挖矿依赖为`cpu`算力，最低配置要求�
     # 将 start.sh 脚本拷贝至 qitmeer 目录下
     ~ vi start.sh
 
-    mining="--miningaddr XmnqZubH9ZkBpv2n79DaYYfrZZsmZxWCppx"
+    mining="--miningaddr TnRVjk9tVK1k2focJ4z4HiaMCfpdBDH5U66"
     ...
     # 如果取消对外方位，记得在云节点安全组里配置相应端口
     rpc="--rpclisten 0.0.0.0:1234 --rpcuser admin --rpcpass 123"
@@ -102,7 +102,7 @@ meer 采用 pow 共识，主要挖矿依赖为`cpu`算力，最低配置要求�
     ~ vi solo.conf
     
     #miner address【修改挖矿地址】
-    mineraddress=XmnqZubH9ZkBpv2n79DaYYfrZZsmZxWCppx
+    mineraddress=TnRVjk9tVK1k2focJ4z4HiaMCfpdBDH5U66
     # node rpc server
     # 改为节点 ip 【内网可以配置为 内网ip】
     rpcserver=http://xx.xxx.xx.xx:1234
@@ -112,7 +112,7 @@ meer 采用 pow 共识，主要挖矿依赖为`cpu`算力，最低配置要求�
     rpcpass=123
     ...
     # network privnet|testnet|mainnet|mixnet
-    network=mixnet
+    network=testnet
 
     :wq
 
