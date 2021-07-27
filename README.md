@@ -1,7 +1,7 @@
 <!--
  * @Author: zhangyi999
  * @Date: 2021-07-06 15:08:36
- * @LastEditTime: 2021-07-15 18:31:35
+ * @LastEditTime: 2021-07-27 15:37:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /meer_mining_shell/README.md
@@ -26,11 +26,14 @@ meer 采用 pow 共识，主要挖矿依赖为`cpu`算力，最低配置要求�
 
     git clone https://github.com/Qitmeer/qitmeer/tree/0.10-dev
     
+    # cd ./cmd/qitmeerd && go build
+    # CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build
+    # CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build
     cd qitmeer
 
     ~ make
     Done building.
-    qitmeer version 0.10.0+dev-b07cab5 (Go version go1.16))
+    qitmeer version  0.10.2 (Go version go1.16))
     Run "./build/bin/qitmeer" to launch.
 
     # 如果这里版本显示不是 0.10 版本，则需要切换到 0.10 分支
@@ -61,9 +64,9 @@ meer 采用 pow 共识，主要挖矿依赖为`cpu`算力，最低配置要求�
         5d44b2f75f3513ab22fab82575b1ce41a86480548c5739be7a625a99bc76ca11
 
         # 创建地址
-        ~ qx ec-to-public 5d44b2f75f3513ab22fab82575b1ce41a86480548c5739be7a625a99bc76ca11 | qx ec-to-addr -v mixnet
+        ~ qx ec-to-public 5d44b2f75f3513ab22fab82575b1ce41a86480548c5739be7a625a99bc76ca11 | qx ec-to-addr
 
-        XmnqZubH9ZkBpv2n79DaYYfrZZsmZxWCppx
+        TnRVjk9tVK1k2focJ4z4HiaMCfpdBDH5U66
 
         # qx 工具并不储存任何数据，以上生成的助记词需要单独保存
     ```

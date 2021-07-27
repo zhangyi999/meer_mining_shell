@@ -1,9 +1,16 @@
 #!/usr/bin/env bash
+###
+ # @Author: your name
+ # @Date: 2021-07-14 21:50:35
+ # @LastEditTime: 2021-07-27 15:36:13
+ # @LastEditors: Please set LastEditors
+ # @Description: In User Settings Edit
+ # @FilePath: /meer_mining_shell/start.sh
+### 
 
-network="--mixnet"
-#network="--testnet"
-#mining="--miningaddr TmWEiwhTJVVMn6p44wM75eSt2v478vwbiiK"
-mining="--miningaddr TmYKjdMDTVfnHMutACib2QqYV9E8iaKAy5f"
+# network="--mixnet"
+network="--testnet"
+mining="--miningaddr TnXXXXXXXXXXXX"
 #mining="--miningaddr RmSUtZ6kMqipWpUrmnyxMcGurghFVF3Asvi"
 debug="-d debug --printorigin"
 rpc="--rpclisten 127.0.0.1:1234 --rpcuser test --rpcpass test"
@@ -30,3 +37,4 @@ externalip="--externalip=192.0.xx.xx"
 # $ ./start.sh
 ./build/bin/qitmeer $externalip $debug $rpc $path $index $network $mining $notls $modules $modules1 "$@"
 # ./cmd/qitmeerd/qitmeerd
+# ./qitmeerd.exe $externalip $debug $rpc $path $index $network $mining $notls $modules $modules1 "$@"
