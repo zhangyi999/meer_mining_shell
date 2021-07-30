@@ -1,10 +1,11 @@
 <!--
  * @Author: zhangyi999
  * @Date: 2021-07-06 15:08:36
- * @LastEditTime: 2021-07-30 19:30:25
+ * @LastEditTime: 2021-07-30 20:09:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /meer_mining_shell/README.md
+ https://github.com/zhangyi999/meer_mining_shell/releases/download/0.10-dev/qimeer-miner.zip
 -->
 # meer testnet 网络挖矿说明
 
