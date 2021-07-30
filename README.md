@@ -1,7 +1,7 @@
 <!--
  * @Author: zhangyi999
  * @Date: 2021-07-06 15:08:36
- * @LastEditTime: 2021-07-27 16:18:40
+ * @LastEditTime: 2021-07-30 19:30:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /meer_mining_shell/README.md
@@ -42,6 +42,7 @@ meer 采用 pow 共识，主要挖矿依赖为`cpu`算力，最低配置要求�
     # 依赖安装时如果安装超时则需要配置代理
     export GOPROXY=https://goproxy.io
     ```
+    如果不像编译，也可以直接下载 `ubuntu` 编译包 [https://github.com/zhangyi999/meer_mining_shell/releases/download/0.10-dev/qitmeerd](https://github.com/zhangyi999/meer_mining_shell/releases/download/0.10-dev/qitmeerd)
 3. 创建 testnet 地址
     * 用 qx 工具创建
     ```bash
